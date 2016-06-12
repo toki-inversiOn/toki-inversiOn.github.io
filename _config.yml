@@ -16,7 +16,7 @@ author :
   github : toki-inversiOn
   twitter : username
   feedburner : feedname
-paginate: 5
+paginate: 3
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
