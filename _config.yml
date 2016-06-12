@@ -16,6 +16,7 @@ author :
   github : toki-inversiOn
   twitter : username
   feedburner : feedname
+paginate: 5
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -27,7 +28,7 @@ author :
 #
 production_url : http://toki-inversiOn.github.io
 
-gems: ["jekyll-sitemap"]
+gems: ["jekyll-sitemap", "jekyll-paginate"]
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
