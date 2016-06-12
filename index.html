@@ -18,13 +18,13 @@ title: Recent posts
     {% else %}
         {% capture previous_page %}/page{{ paginator.previous_page }}{% endcapture %}
     {% endif %}
-    <a class="pure-button" href="{{ previous_page }}">&larr; Prev</a>
+    <a class="pure-button" style="text-decoration: none" href="{{ previous_page }}">&larr; Prev</a>
 {% endif %}
 	{% capture location %}{{page.url | remove_first: 'page'}}{% endcapture %}
 	{% capture locationtrimmed %}{{location | split: '/'}}{% endcapture %}
 	{% if paginator.previous_page %} <b>Page {{ locationtrimmed }}</b>{% endif %}
 {% if paginator.next_page %}
-    <a class="pure-button" href="/page{{ paginator.next_page }}">Next &rarr;</a>
+    <a class="pure-button" style="text-decoration: none" href="/page{{ paginator.next_page }}">Next &rarr;</a>
     {% else %}
     	<button class="pure-button pure-button-disabled">Next &rarr;</button>
 {% endif %}
