@@ -3,7 +3,7 @@ layout: page
 title: Recent posts
 ---
 {% include JB/setup %}
-
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <ul class="posts">
   {% for post in paginator.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}"><h2>{{ post.title }}</h2></a></li>
@@ -11,27 +11,21 @@ title: Recent posts
   {% endfor %}
 </ul>
 
-
-
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-  <ul>
-    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
-  {% endif %}
-<!--
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+<center>
+{% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+        {% capture previous_page %}/{% endcapture %}
     {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% capture previous_page %}/page{{ paginator.previous_page }}{% endcapture %}
     {% endif %}
-  {% endfor %}
--->
-  {% if paginator.next_page %}
-  <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
-  {% endif %}
-</div>
+    <a class="pure-button" href="{{ previous_page }}">&larr; Prev</a>
 {% endif %}
+	{% capture location %}{{page.url | remove_first: 'page'}}{% endcapture %}
+	{% capture locationtrimmed %}{{location | split: '/'}}{% endcapture %}
+	{% if paginator.previous_page %} <b>Page {{ locationtrimmed }}</b>{% endif %}
+{% if paginator.next_page %}
+    <a class="pure-button" href="/page{{ paginator.next_page }}">Next &rarr;</a>
+    {% else %}
+    	<button class="pure-button pure-button-disabled">Next &rarr;</button>
+{% endif %}
+</center>
