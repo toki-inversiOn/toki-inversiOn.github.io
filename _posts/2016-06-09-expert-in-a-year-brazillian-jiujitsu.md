@@ -2,7 +2,7 @@
 layout: post
 title: "Expert in a Year: Brazillian Jiu-Jitsu"
 description: ""
-category: Jiu-Jitsu
+category: jiu-jitsu
 tags: []
 image: de2-115.jpg
 ---
