@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Expert in a Year: Brazillian Jiu-Jitsu"
+title: "Melee Tech"
 description: ""
-category: jiu-jitsu
+category: projects
 tags: []
 image: de2-115.jpg
 ---
 {% include JB/setup %}
-Hi, I am Tanmay Khale and in a year I want to be an expert in Brazillian Jiu-Jitsu.
+I created a way to practice technical skill in Super Smash Bros. Melee in a guitar hero like format, giving instant feedback on the timing of your inputs.
