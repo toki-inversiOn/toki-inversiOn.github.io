@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MIPS on FPGA"
-description: ""
+description: "this is a description of MIPS on FPGA"
 category: projects
 tags: []
 image: de2-115.jpg
